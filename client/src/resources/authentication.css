@@ -1,0 +1,155 @@
+ /* .register {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right, #30cfd0 0%, #330867 100%);}
+
+.lottie {
+    height: 400px;
+}
+
+.register input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.784);
+    color: rgba(255, 255, 255, 0.536)
+}
+input:focus{
+    outline: none !important;
+    box-shadow: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.784) !important;
+
+}
+
+label, a{
+    color: rgba(255, 255, 255, 0.536) !important;
+}
+
+.register h1{
+    font-size:35px ;
+    color: white;
+    font-weight: 600;
+}  */
+
+
+.register {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    padding: 20px;
+  }
+  
+  .login-form {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  }
+  
+  .register input {
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 5px 0;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7) !important;
+
+  }
+  
+  input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+  }
+  
+  input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-bottom: 1px solid white !important;
+  }
+  
+  label,
+  a,
+  .subtitle {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+  
+  .register h1 {
+    font-size: 36px;
+    color: white;
+    font-weight: 700;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  
+  .btn-glow {
+    background-color: #00c9ff;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-weight: 600;
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(0, 201, 255, 0.4);
+    transition: 0.3s ease-in-out;
+  }
+  
+  .btn-glow:hover {
+    background-color: #009dcf;
+    box-shadow: 0 6px 20px rgba(0, 201, 255, 0.6);
+  }
+  
+ 
+  /* Wrapper around Input.Password */
+.ant-input-affix-wrapper {
+    background-color: transparent;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding-left: 0;
+    padding-right: 0;
+    color: white;
+    
+  }
+  
+  /* On focus - remove all border/outline */
+  .ant-input-affix-wrapper-focused {
+    border: none !important;
+    box-shadow: none !important;
+  }
+  
+  /* Style actual input inside Password */
+  .ant-input {
+    background: transparent !important;
+  }
+  
+  /* Optional: Customize eye icon (toggle visibility) */
+  .anticon-eye,
+  .anticon-eye-invisible {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  /* Chrome/Safari autofill fix */
+.register input:-webkit-autofill,
+.register input:-webkit-autofill:hover, 
+.register input:-webkit-autofill:focus, 
+.register input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+  -webkit-text-fill-color: white !important;
+  transition: background-color 5000s ease-in-out 0s !important;
+}
+
+
+
+/* login image css */
+
+
+  
