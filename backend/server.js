@@ -9,10 +9,12 @@ app.use(express.json())
 const port = process.env.PORT || 5000
 
 // Allow requests from http://localhost:3000
-app.use(cors({
-  origin: 'http://localhost:3000',
-  credentials: true // only needed if you're using cookies/auth headers
-}));
+app.use(
+  cors({
+    origin: ["http://localhost:3000", "https://xpendly-g5ol.vercel.app/"],
+    credentials: true, // only needed if you're using cookies/auth headers
+  })
+);
 
 app.use('/api/users/', userRoutes)
 app.use('/api/transactions/', transactionRoutes)

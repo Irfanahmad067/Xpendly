@@ -64,7 +64,7 @@ export const Home = () => {
 
   useEffect(() => {
     getTransactions();
-  }, [frequency, selectedRange, type, getTransactions]);
+  }, [frequency, selectedRange, type]);
 
   const columns = [
     {
