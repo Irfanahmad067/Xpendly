@@ -7,13 +7,15 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import Spinner from "../components/Spinner";
 
+
 export const Login = () => {
+  const url = process.env.REACT_APP_BACKEND_URL;
   const navigate = useNavigate()
   const [loading, setLoading] = useState(false);
   const onFinish = async (values) => {
     try{
       setLoading(true)
-      const response  = await axios.post('/api/users/login', values)
+      const response  = await axios.post(`${url}/api/users/login`, values)
       localStorage.setItem('track-it-user', JSON.stringify({...response.data, password:''}))
       setLoading(false)
       message.success('Login Successfully')
@@ -22,7 +24,6 @@ export const Login = () => {
     catch(error){
       setLoading(false)
       console.log("error2222", error)
-      toast.error(error.response.data.message);
     }
     
   };

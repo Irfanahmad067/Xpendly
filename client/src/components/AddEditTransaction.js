@@ -15,11 +15,12 @@ import axios from 'axios';
    const onFinish = async (values) => {
      try {
       const user = JSON.parse(localStorage.getItem("track-it-user"));
+      const url = process.env.REACT_APP_BACKEND_URL;
 
       /// for edit transaction
       if(selectedItemForEdit){
         setLoading(true);
-        await axios.post("/api/transactions/edit-transaction", {
+        await axios.post(`${url}/api/transactions/edit-transaction`, {
           payload:{
             ...values,
             userId: user._id,
@@ -32,7 +33,7 @@ import axios from 'axios';
       }
       else{            /// adding new transaction
         setLoading(true);
-        await axios.post("/api/transactions/add-transaction", {
+        await axios.post(`${url}/api/transactions/add-transaction`, {
           ...values,
           userId: user._id,
         });

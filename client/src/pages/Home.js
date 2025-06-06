@@ -23,12 +23,13 @@ export const Home = () => {
   const [selectedItemForEdit, setSelectedItemForEdit] = useState(null);
 
   const getTransactions = async () => {
+    const url = process.env.REACT_APP_BACKEND_URL;
     try {
       const user = JSON.parse(localStorage.getItem("track-it-user"));
       
       setLoading(true);
       const response = await axios.post(
-        "/api/transactions/get-all-transactions",
+        `${url}/api/transactions/get-all-transactions`,
         { userId: user._id, frequency, ...(frequency === "custom" && {selectedRange}), type }
       );
       setTransactionsData(response.data);
@@ -42,10 +43,11 @@ export const Home = () => {
 
 
   const deleteTransaction = async (record) => {
+    const url = process.env.REACT_APP_BACKEND_URL;
     try {
       setLoading(true);
        await axios.post(
-        "/api/transactions/delete-transaction",
+        `${url}/api/transactions/delete-transaction`,
         {
          transactionId : record._id
         }

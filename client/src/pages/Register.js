@@ -7,12 +7,13 @@ import axios from "axios";
 import Spinner from "../components/Spinner";
 
 export const Register = () => {
+    const url = process.env.REACT_APP_BACKEND_URL;
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate(true)
     const onFinish = async(values) => {
       try{
         setLoading(true)
-        await axios.post('/api/users/register', values)
+        await axios.post(`${url}/api/users/register`, values)
         message.success('Registered Successfully',[20]);
         navigate('/login')
         setLoading(false)
