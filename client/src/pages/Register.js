@@ -28,7 +28,7 @@ export const Register = () => {
     if(localStorage.getItem('track-it-user')){
       navigate('/')
     }
-      },[])
+      })
 
   return (
     <div className="register">

@@ -4,7 +4,6 @@ import { Input } from "antd";
 import { Link , useNavigate} from "react-router-dom";
 import "../resources/authentication.css";
 import axios from "axios";
-import toast from "react-hot-toast";
 import Spinner from "../components/Spinner";
 
 
@@ -32,7 +31,7 @@ export const Login = () => {
     if(localStorage.getItem('track-it-user')){
       navigate('/')
     }
-  },[])
+  })
 
   return (
     <div className="register">
